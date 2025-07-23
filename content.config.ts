@@ -12,10 +12,11 @@ export default defineContentConfig({
       schema: z.object({
         name: z.string(),
         apport_calorique: z.number().default(0),
-        image: z.string(),
+        image: z.string().editor({ input: 'media' }),
         short_description: z.string(),
         long_description: z.string().optional(),
-        category: z.enum(['BASES', 'INGREDIENTS', 'SAUCES', 'COMPOSITIONS SIGNATURE', 'PÂTES CHAUDES', 'BOISSONS', 'DESSERTS'])
+        category: z.enum(['BASES', 'INGREDIENTS', 'SAUCES', 'COMPOSITIONS SIGNATURE', 'PÂTES CHAUDES', 'BOISSONS', 'DESSERTS']),
+        is_featured: z.boolean().default(false)
       })
     })
   }
