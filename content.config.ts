@@ -8,7 +8,7 @@ export default defineContentConfig({
     }),
     products: defineCollection({
       type: 'data',
-      source: 'products/**/*.yml',
+      source: 'products/*.yml',
       schema: z.object({
         name: z.string(),
         apport_calorique: z.number().default(0),
