@@ -5,7 +5,7 @@ export default defineNuxtSchema({
     ui: group({
       title: 'UI',
       fields: {
-        colors: field({
+        colors: group({
           type: 'object'
         })
       }
