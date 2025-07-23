@@ -27,7 +27,11 @@ useHead({
 
 <template>
   <UApp>
-    <UHeader />
+    <UHeader>
+      <template #right>
+        <UColorModeButton/>
+      </template>
+    </UHeader>
 
     <UMain>
       <NuxtPage />
