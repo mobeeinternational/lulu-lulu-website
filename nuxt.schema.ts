@@ -35,10 +35,10 @@ export default defineNuxtSchema({
   }
 })
 
-declare module '@nuxt/schema' {
-  interface CustomAppConfig {
-    ui: {
-      icons: object
-    }
-  }
-}
+// declare module '@nuxt/schema' {
+//   interface CustomAppConfig {
+//     ui: {
+//       icons: object
+//     }
+//   }
+// }
