@@ -1,15 +1,12 @@
 <template>
   <div>
-    <UPageHero v-bind="data?.hero" />
-    <UPageSection
-      v-for="section in data?.sections"
-      :key="section.title"
-      v-bind="section"
-    />
+    <ContentRenderer :value="data" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ContentRenderer } from '#components'
+
 const route = useRoute()
 
 const { data } = await useAsyncData(() => queryCollection('pages').path(route.path).first())
