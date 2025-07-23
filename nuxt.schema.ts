@@ -6,7 +6,6 @@ export default defineNuxtSchema({
       title: 'UI',
       description: 'UI Customization.',
       icon: 'i-mdi-palette-outline',
-      default: { colors: { primary: 'green', neutral: 'slate' } },
       fields: {
         colors: group({
           title: 'Colors',
