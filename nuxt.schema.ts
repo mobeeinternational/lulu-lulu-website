@@ -185,48 +185,6 @@ export default defineNuxtSchema({
           default: []
         })
       }
-    }),
-    toc: group({
-      title: 'Table of contents',
-      description: 'TOC configuration.',
-      icon: 'i-mdi-table-of-contents',
-      fields: {
-        title: field({
-          type: 'string',
-          title: 'Title',
-          description: 'Text to display as title of the main toc.',
-          icon: 'i-mdi-format-title',
-          default: ''
-        }),
-        bottom: group({
-          title: 'Bottom',
-          description: 'Bottom TOC configuration.',
-          icon: 'i-mdi-table-of-contents',
-          fields: {
-            title: field({
-              type: 'string',
-              title: 'Title',
-              description: 'Text to display as title of the bottom toc.',
-              icon: 'i-mdi-format-title',
-              default: ''
-            }),
-            edit: field({
-              type: 'string',
-              title: 'Edit Page Link',
-              description: 'URL of your repository content folder.',
-              icon: 'i-ph-note-pencil',
-              default: ''
-            }),
-            links: field({
-              type: 'array',
-              title: 'Links',
-              description: 'Array of link object displayed in bottom toc.',
-              icon: 'i-mdi-link-variant',
-              default: []
-            })
-          }
-        })
-      }
     })
   }
 })
