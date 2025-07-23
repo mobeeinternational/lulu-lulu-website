@@ -40,7 +40,7 @@ links:
 class: bg-neutral-100
 title: Notre carte
 ---
-  :::u-page-grid{.grid-cols-2.md:lg-grid-cols-4.lg:grid-cols-4}
+  :::u-page-grid{.grid-cols-2.md:grid-cols-3.lg:grid-cols-4}
     ::::product{product="hawaienne"}
     ::::
   
