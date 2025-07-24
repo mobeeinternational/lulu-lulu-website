@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -30,18 +31,6 @@ export default defineNuxtConfig({
       const globals = components.filter(c => ['UButton', 'UIcon', 'UPageHero', 'UPageSection', 'UPageGrid', 'UPageCard'].includes(c.pascalName))
 
       globals.forEach(c => c.global = true)
-    },
-    'content:file:beforeParse'(file) {
-      console.log('Before Parse')
-      console.log(JSON.stringify(file, null, 2))
-      if (file.file?.id.endsWith('.md') && typeof file?.file?.body === 'string') {
-        file.file.body = file.file.body.replace(
-          /::([a-zA-Z0-9_-]+)\{\.([a-zA-Z0-9-_\s:/!]+)\}/g,
-          (_, component, classes) => {
-            return `::${component}{class="${classes.trim()}"}`
-          }
-        )
-      }
     }
   },
 

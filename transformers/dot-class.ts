@@ -1,22 +1,31 @@
-import { defineTransformer } from '@nuxt/content'
+// ~/content/remark/class-shorthand.ts
+import { visit } from 'unist-util-visit'
+import type { Plugin } from 'unified'
+import type { Root } from 'mdast'
+import type { Node } from 'unist'
 
-export default defineTransformer({
-  name: 'dot-class-fix',
-  extensions: ['.md'],
-  transform(file) {
-    console.log(file)
-    if (typeof file.body !== 'string') return file
+interface DirectiveNode extends Node {
+  name: string
+  attributes?: Record<string, string | boolean>
+  children?: Node[]
+}
 
-    const newBody = file.body.replace(
-      /::([a-zA-Z0-9_-]+)\{\.([a-zA-Z0-9-_\s:\/!]+)\}/g,
-      (_, component, classes) => {
-        return `::${component}{class="${classes.trim()}"}`
+const classShorthandPlugin: Plugin<[], Root> = () => {
+  return (tree) => {
+    visit(tree, (node: Node) => {
+      const directive = node as DirectiveNode
+      console.log(directive.attributes || 'ff')
+      if (!directive.attributes) return
+
+      for (const key of Object.keys(directive.attributes)) {
+        if (key.startsWith('.')) {
+          const className = key.slice(1)
+          directive.attributes.class = (directive.attributes.class || '') + ' ' + className
+          delete directive.attributes[key]
+        }
       }
-    )
-
-    return {
-      ...file,
-      body: newBody
-    }
+    })
   }
-})
+}
+
+export default classShorthandPlugin // ✅ Bien un export `default`
