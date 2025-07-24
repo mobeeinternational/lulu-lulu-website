@@ -17,7 +17,7 @@ export default defineNuxtSchema({
               title: 'Primary',
               description: 'Primary color of your UI.',
               icon: 'i-mdi-palette-outline',
-              default: 'green',
+              default: 'port-gore',
               required: ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
             }),
             neutral: field({
