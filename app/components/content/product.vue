@@ -29,5 +29,5 @@ const props = defineProps({
   }
 })
 
-const { data: productData } = await useAsyncData(() => queryCollection('products').where('stem', '=', 'products/' + props.product).first())
+const { data: productData } = await useAsyncData(`product-${props.product}`, () => queryCollection('products').where('stem', '=', 'products/' + props.product).first())
 </script>

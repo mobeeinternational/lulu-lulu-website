@@ -3,19 +3,20 @@
 
 @source '../../../content';
 
+
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-port-gore: oklch(26.589% 0.0616 274.93);
+  --color-port-gore-50: oklch(55.154% 0.12303 275.11);
+  --color-port-gore-100: oklch(51.155% 0.1356 274.14);
+  --color-port-gore-200: oklch(45.072% 0.12186 274.19);
+  --color-port-gore-300: oklch(39.282% 0.10275 274.37);
+  --color-port-gore-400: oklch(32.896% 0.08291 274.55);
+  --color-port-gore-500: oklch(26.589% 0.0616 274.93);
+  --color-port-gore-600: oklch(16.967% 0.02938 276.6);
+  --color-port-gore-700: oklch(0% 0 none);
+  --color-port-gore-800: oklch(0% 0 none);
+  --color-port-gore-900: oklch(0% 0 none);
+  --color-port-gore-950: oklch(0% 0 none);
 }
-
