@@ -1,9 +1,6 @@
 export default defineAppConfig({
   ui: {
-    colors: {
-      primary: 'port-gore',
-      secondary: 'yellow'
-    },
+    colors: 'red',
     button: {
       slots: {
         base: 'font-bold'
