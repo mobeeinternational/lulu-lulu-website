@@ -75,7 +75,7 @@ export default defineAppConfig({
             to: 'https://g.co/kgs/39Jrsh8'
           },
           {
-            label: `Champagne au Mont D'or / Techlid`
+            label: 'Champagne au Mont D\'or / Techlid'
           },
           {
             label: 'Lyon 1 (à venir'
