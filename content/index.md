@@ -1,4 +1,5 @@
-:prose-img{src="/home/background.jpg" alt="Lulu & Lulu" :zoom="false"}
+::prose-img{:zoom='false' alt="Lulu & Lulu" src="/home/background.jpg"}
+::
 
 ::u-page-section
   :::prose-card-group{.lg:grid-cols-3}
@@ -40,7 +41,7 @@ links:
 class: bg-neutral-100
 title: Notre carte
 ---
-  :::u-page-grid{class="grid-cols-2 md:grid-cols-3 lg:grid-cols-4"}
+  :::u-page-grid{.grid-cols-2.md:grid-cols-3.lg:grid-cols-4}
     ::::product{product="hawaienne"}
     ::::
   
