@@ -19,4 +19,6 @@
   --color-port-gore-800: oklch(0% 0 none);
   --color-port-gore-900: oklch(0% 0 none);
   --color-port-gore-950: oklch(0% 0 none);
+
+  --color-secondary: var(--color-secondary-400)
 }

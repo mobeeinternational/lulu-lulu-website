@@ -1,4 +1,4 @@
-![Lulu & Lulu](/home/background.jpg)
+:prose-img{src="/home/background.jpg" alt="Lulu & Lulu" :zoom="false"}
 
 ::u-page-section
   :::prose-card-group{.lg:grid-cols-3}
@@ -36,15 +36,15 @@ Le concept
 links:
   - label: Voir la carte et les tarifs
   - label: Voir tous nos produits
-    color: neutral
+    color: secondary
 class: bg-neutral-100
 title: Notre carte
 ---
-  :::u-page-grid{.grid-cols-2.md:grid-cols-3.lg:grid-cols-4}
+  :::u-page-grid{class="grid-cols-2 md:grid-cols-3 lg:grid-cols-4"}
     ::::product{product="hawaienne"}
     ::::
   
-    ::::product{product="hawaienne"}
+    ::::product{product="sportive"}
     ::::
   :::
 ::

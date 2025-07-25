@@ -11,6 +11,8 @@ useHead({
   }
 })
 
+const { navbar, footer } = useAppConfig()
+
 // const title = 'Nuxt Starter Template'
 // const description = 'Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.'
 
@@ -27,9 +29,46 @@ useHead({
 
 <template>
   <UApp>
-    <UHeader>
+    <UHeader
+      class="bg-primary-500 text-white border-b-0"
+      :ui="{
+        toggle: 'text-white/80 hover:text-white hover:bg-transparent active:bg-transparent',
+        content: 'bg-primary',
+        header: 'border-b-0'
+      }"
+    >
+      <template #left>
+        <img
+          :src="navbar.logo"
+          class="h-12"
+        >
+      </template>
+      <template #default>
+        <UNavigationMenu
+          :ui="{
+            linkLabel: 'text-white/80 hover:text-white'
+          }"
+          variant="link"
+          :items="navbar.links"
+          orientation="horizontal"
+        />
+      </template>
+      <template #body>
+        <UNavigationMenu
+          :items="navbar.links"
+          orientation="vertical"
+          :ui="{
+            linkLabel: 'text-white/80 hover:text-white group-data-[active]:!text-primary'
+          }"
+        />
+      </template>
+
       <template #right>
-        <UColorModeButton/>
+        <UButton
+          color="secondary"
+          size="lg"
+          label="Je commande"
+        />
       </template>
     </UHeader>
 
@@ -37,14 +76,22 @@ useHead({
       <NuxtPage />
     </UMain>
 
-    <UFooter>
-      <template #left>
-        <p class="text-sm text-muted">
-          Copyright © {{ new Date().getFullYear() }}
-        </p>
+    <UFooter class="!bg-primary">
+      <template #top>
+        <UContainer class="dark">
+          <UFooterColumns :columns="footer.links" :ui="{
+            linkLabel: 'text-white/80 hover:text-white',
+            label: 'text-white text-lg'
+          }">
+            <template #left>
+              <img
+                :src="navbar.logo"
+                class="h-24"
+              >
+            </template>
+          </UFooterColumns>
+        </UContainer>
       </template>
-
-      <template #right />
     </UFooter>
   </UApp>
 </template>

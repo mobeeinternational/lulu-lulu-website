@@ -1,5 +1,0 @@
-<template>
-    <UPageGrid>
-        
-    </UPageGrid>
-</template>
