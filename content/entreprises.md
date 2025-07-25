@@ -1,3 +1,10 @@
+---
+seo:
+  title: Livraison pour les entreprises
+  description: Lulu & Lulu propose la livraison de repas aux entreprises.
+    Découvrez comment en profiter.
+---
+
 ::u-page-hero
 ---
 description: Vous êtes une entreprise ? Découvrez notre service de livraison gratuit !
@@ -14,6 +21,8 @@ orientation: horizontal
 title: Un service de livraison aux entreprises
 ---
 :video{controls :height='250' :width='500' src="/entreprises/video.mov"}
+
+ 
 
 #description
 Conscient du besoin de flexibilité des travailleurs lors du déjeuner, nous avons mis en place un service de livraison gratuit pour les entreprises.
