@@ -13,6 +13,8 @@ useHead({
 
 const { navbar, footer } = useAppConfig()
 
+definePageMeta({ colorMode: 'light' })
+
 // const title = 'Nuxt Starter Template'
 // const description = 'Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.'
 
@@ -38,10 +40,13 @@ const { navbar, footer } = useAppConfig()
       }"
     >
       <template #left>
-        <img
-          :src="navbar.logo"
-          class="h-12"
-        >
+        <NuxtLink to="/">
+
+          <img
+            :src="navbar.logo"
+            class="h-12"
+          >
+        </NuxtLink>
       </template>
       <template #default>
         <UNavigationMenu
@@ -64,6 +69,7 @@ const { navbar, footer } = useAppConfig()
       </template>
 
       <template #right>
+        <UColorModeButton/>
         <UButton
           color="secondary"
           size="lg"
@@ -79,10 +85,13 @@ const { navbar, footer } = useAppConfig()
     <UFooter class="!bg-primary">
       <template #top>
         <UContainer class="dark">
-          <UFooterColumns :columns="footer.links" :ui="{
-            linkLabel: 'text-white/80 hover:text-white',
-            label: 'text-white text-lg'
-          }">
+          <UFooterColumns
+            :columns="footer.links"
+            :ui="{
+              linkLabel: 'text-white/80 hover:text-white',
+              label: 'text-white text-lg'
+            }"
+          >
             <template #left>
               <img
                 :src="navbar.logo"

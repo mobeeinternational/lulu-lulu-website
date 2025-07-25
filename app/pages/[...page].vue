@@ -9,7 +9,7 @@ import { ContentRenderer } from '#components'
 
 const route = useRoute()
 
-const { data } = await useAsyncData(() => queryCollection('pages').path(route.path).first())
+const { data } = await useAsyncData(`page-${route.path}`, () => queryCollection('pages').path(route.path).first())
 
 if (!data?.value) {
   throw createError({
